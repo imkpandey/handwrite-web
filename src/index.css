@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Handwrite-Logo {
+  width: 300px;
+  display: block;
+  margin: auto;
+  padding-top: 5%;
+}
+
+.input-form{
+  align-items: center;
+  text-align: center;
+}
+
+.input-image{
+  width: 50%;
+  padding-top:30px;
+  padding-bottom: 30px;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+  /* height: 100px; */
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
