@@ -19,19 +19,19 @@ code {
   padding-top: 5%;
 }
 
-.input-form{
+/* .input-form{
   align-items: center;
   text-align: center;
-}
+} */
 
 .input-image{
-  width: 50%;
+  width: 25%;
   padding-top:30px;
   padding-bottom: 30px;
-  align-items: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  /* align-items: center; */
+  /* display: block; */
+  /* margin-left: auto; */
+  /* margin-right: auto */
   /* height: 100px; */
 }
 
