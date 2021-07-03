@@ -11,9 +11,9 @@ function Handwrite() {
       <img src={logo} alt="handwrite logo" className="Handwrite-Logo" />
       <Navbar />
       <Dropzone />
-      <div className="input-form">
+      {/* <div className="input-form">
         <Menu />
-      </div>
+      </div> */}
     </div>
   );
 }
