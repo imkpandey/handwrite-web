@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Grid from '@material-ui/core/Grid'
 import React from 'react';
 
+// gunicorn "app:create_app()" --log-level debug --timeout 90 --workers 2 --max-requests 10 --config config.py
+
 const Menu = () => {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
@@ -18,7 +20,7 @@ const Menu = () => {
         var font_url;
         setFetching(true);
         fetch(
-            "http://handwritetest.herokuapp.com/handwrite/input",
+            "http://localhost:8000/handwrite/input",
             {
                 method: 'POST',
                 body: formData
@@ -26,7 +28,7 @@ const Menu = () => {
         ).then((r) => r.json()).then(async (data) => {
             path = data.path;
             for (let i = 0; i < 10; i++) {
-                fetch("http://handwritetest.herokuapp.com/handwrite/status/" + path).then((r) => r.json()).then((status) => {
+                fetch("http://localhost:8000/handwrite/status/" + path).then((r) => r.json()).then((status) => {
                     if (status.status === 0) {
                         console.log("Font file ready!");
                         stat = 0;
@@ -41,7 +43,7 @@ const Menu = () => {
         }).then(() => { 
             if (stat === 0) {
                 fetch(
-                    "http://handwritetest.herokuapp.com/handwrite/fetch/" + path,
+                    "http://localhost:8000/handwrite/fetch/" + path,
                     {
                         method: 'POST'
                     }

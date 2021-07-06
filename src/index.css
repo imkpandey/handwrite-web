@@ -87,13 +87,28 @@ code {
   overflow-y: auto;
 }
 
-.container h6{
-  padding: 2px;
-  margin-left: 113px;
-  align-items: center
+.main-form{
+  align-items: center;
 }
 
-.container button{
+.MuiContainer-root{
+  display: flex;
+  height: 450px;
+  width: 40%;
+  align-items: center;
+  text-align: center;
+  border-width: 1px;
+  justify-content: center;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border .24s ease-in-out;
+}
+
+.MuiContainer-root button{
   height: 20px;
   font-size: 15px;
   font-weight: 300;
@@ -115,7 +130,7 @@ code {
   align-items: center;
 }
 
-.container button:hover {
+.MuiContainer-root button:hover {
   border-color: hsl(0, 0%, 21%);
 }
 
