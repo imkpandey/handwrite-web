@@ -19,10 +19,10 @@ code {
   padding-top: 2%;
 }
 
-/* .input-form{
+.input-form{
   align-items: center;
   text-align: center;
-} */
+}
 
 .input-image{
   height: 430px;
@@ -91,10 +91,10 @@ code {
   align-items: center;
 }
 
-.MuiContainer-root{
+.image-container {
   display: flex;
   height: 450px;
-  width: 40%;
+  width: 350px;
   align-items: center;
   text-align: center;
   border-width: 1px;
@@ -108,7 +108,7 @@ code {
   transition: border .24s ease-in-out;
 }
 
-.MuiContainer-root button{
+.image-container button{
   height: 20px;
   font-size: 15px;
   font-weight: 300;
@@ -130,7 +130,7 @@ code {
   align-items: center;
 }
 
-.MuiContainer-root button:hover {
+.image-container button:hover {
   border-color: hsl(0, 0%, 21%);
 }
 

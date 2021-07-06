@@ -25,23 +25,28 @@ function Dropzone(props) {
 
   return (
     <div>
-        <Container> <input {...getInputProps()} />
-        {image[0] ? <div className="input-image">
-          <img src={image[0]} />
-        </div> :
-          <div>
-            <h3>Drag 'n' drop your handwritten sample</h3>
-            <h2>OR</h2>
-            <center><button type="button" onClick={open}><CloudUploadOutlined />
-              ‎ ‎ ‎Choose file
-            </button></center>
+      <Grid container direction="row" justify="space-around" alignItems="center">
+        <div>
+          <div className="image-container"> <input {...getInputProps()} />
+            {image[0] ?
+              <div className="input-image">
+                <img src={image[0]} />
+              </div> :
+              <div>
+                <h3>Drag 'n' drop your handwritten sample</h3>
+                <h2>OR</h2>
+                <center><button type="button" onClick={open}><CloudUploadOutlined />
+                  ‎ ‎ ‎Choose file
+                </button></center>
+              </div>
+            }
           </div>
-        }
-      <h6>{image[1]}</h6>
-      </Container>
-    <div className="main-form">
-      <button>CREATE FONT</button>
-    </div>
+          <center><h6>{image[1]}</h6></center>
+        </div>
+        <div className="main-form">
+          <button>CREATE FONT</button>
+        </div>
+      </Grid>
     </div>
   );
 }
