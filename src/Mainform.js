@@ -12,6 +12,7 @@ function Mainform(props) {
   const [fetching, setFetching] = useState(false);
   const {
     getInputProps,
+    acceptedFiles,
     open
   } = useDropzone({
     accept: 'image/*',
@@ -27,13 +28,13 @@ function Mainform(props) {
   function sendImage(event) {
     event.preventDefault();
     let formData = new FormData();
-    formData.append("image", image[0]);
+    formData.append("image", acceptedFiles[0]);
     var stat = -1;
     var path;
     var font_url;
     setFetching(true);
     fetch(
-        "http://handwritetest.herokuapp.com/handwrite/input",
+        "http://127.0.0.1:8000/handwrite/input",
         {
             method: 'POST',
             body: formData
@@ -41,7 +42,7 @@ function Mainform(props) {
     ).then((r) => r.json()).then(async (data) => {
         path = data.path;
         for (let i = 0; i < 10; i++) {
-            fetch("http://handwritetest.herokuapp.com/handwrite/status/" + path).then((r) => r.json()).then((status) => {
+            fetch("http://127.0.0.1:8000/handwrite/status/" + path).then((r) => r.json()).then((status) => {
                 if (status.status === 0) {
                     console.log("Font file ready!");
                     stat = 0;
@@ -56,7 +57,7 @@ function Mainform(props) {
     }).then(() => { 
         if (stat === 0) {
             fetch(
-                "http://handwritetest.herokuapp.com/handwrite/fetch/" + path,
+                "http://127.0.0.1:8000/handwrite/fetch/" + path,
                 {
                     method: 'POST'
                 }
