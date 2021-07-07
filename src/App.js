@@ -3,14 +3,14 @@ import Menu from './Menu';
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
-import Dropzone from './dnd.js'
+import Mainform from './Mainform.js';
 
 function Handwrite() {
   return (
     <div className="handwrite">
       <img src={logo} alt="handwrite logo" className="Handwrite-Logo" />
       <Navbar />
-      <Dropzone />
+      <Mainform />
       {/* <div className="input-form">
         <Menu />
       </div> */}

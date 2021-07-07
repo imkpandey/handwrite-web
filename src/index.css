@@ -87,10 +87,6 @@ code {
   overflow-y: auto;
 }
 
-.main-form{
-  align-items: center;
-}
-
 .image-container {
   display: flex;
   height: 450px;
@@ -131,6 +127,32 @@ code {
 }
 
 .image-container button:hover {
+  border-color: hsl(0, 0%, 21%);
+}
+
+.submit-form button{
+  height: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-radius: 12px;
+  border-width: 2px;
+  background-color: rgb(46, 135, 250);
+  color: hsl(0, 0%, 100%);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-form button:hover {
   border-color: hsl(0, 0%, 21%);
 }
 
