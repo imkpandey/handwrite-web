@@ -8,14 +8,14 @@ const Navbar = () => {
     }
     return ( 
         <nav className="navbar">
-            <div className="links">
-            <button onClick = {() => handlePopup()}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎About ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎</button>
-            <button onClick = {() => handlePopup()}>How To Use?</button>
-            <button onClick = {() => handlePopup()}>Documentation</button>
-            </div>
+            <ul>
+            <li><button onClick = {() => handlePopup()}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎About ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎</button></li>
+            <li><button onClick = {() => handlePopup()}>How To Use?</button></li>
+            <li><button onClick = {() => handlePopup()}>Documentation</button></li>
             {
                 popup === true ? <Popup hide = {() => setPopup(false)} /> : ''
             }
+            </ul>
         </nav>
 
      );

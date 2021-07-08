@@ -36,10 +36,22 @@ code {
 }
 
 .navbar {
-  padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid #ececec;
+}
+
+.navbar ul{
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0; 
+}
+
+.navbar li{
+  margin-left: 140px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -47,7 +59,6 @@ code {
   color: black;
   align-items: center;
   text-decoration: none;
-  margin-left: 130px;
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -56,7 +67,6 @@ code {
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
-  display: inline-block;
 }
 
 .navbar button::after {
@@ -75,6 +85,28 @@ code {
 .navbar button:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+@media all and (max-width: 900px) {
+  .navbar ul{
+    justify-content: space-evenly;
+  }
+  .navbar li{
+     margin-left: 30px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .navbar ul {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .navbar li { 
+    margin: 5px;
+    text-align: center; 
+    padding-left: 150px;
+    justify-content: center;
+  }
 }
 
 .modal-body{
@@ -130,29 +162,20 @@ code {
   border-color: hsl(0, 0%, 21%);
 }
 
+
 .submit-form button{
-  height: 20px;
-  font-size: 15px;
-  font-weight: 300;
-  cursor: pointer;
-  outline: 0;
-  user-select: none;
-  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
-  border-style: solid;
-  border-radius: 12px;
-  border-width: 2px;
-  background-color: rgb(46, 135, 250);
-  color: hsl(0, 0%, 100%);
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: flex;
-  justify-content: center;
+  margin: auto;
   align-items: center;
+  justify-content: center;
 }
 
-.submit-form button:hover {
-  border-color: hsl(0, 0%, 21%);
-}
+/* @media all and (max-width: 400px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .navbar button{
+    text-align: center;
+  }
+} */
+
 
