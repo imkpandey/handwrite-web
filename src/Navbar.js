@@ -1,24 +1,24 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Popup from './Popup';
 import navdata from './navdata';
 const Navbar = () => {
     const [popup, setPopup] = useState(false);
     const handlePopup = () => {
-        return setPopup (true);
+        return setPopup(true);
     }
-    return ( 
-        <nav className="navbar">
-            <ul>
-            <li><button onClick = {() => handlePopup()}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎About ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎</button></li>
-            <li><button onClick = {() => handlePopup()}>How To Use?</button></li>
-            <li><button onClick = {() => handlePopup()}>Documentation</button></li>
+    return (
+        // <nav className="navbar">
+        <div className="flexbox-container">
+            <div><button onClick={() => handlePopup()}>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎About ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎</button></div>
+            <div><button onClick={() => handlePopup()}>How To Use?</button></div>
+            <div><button onClick={() => handlePopup()}>Documentation</button></div>
             {
-                popup === true ? <Popup hide = {() => setPopup(false)} /> : ''
+                popup === true ? <Popup hide={() => setPopup(false)} /> : ''
             }
-            </ul>
-        </nav>
+        </div>
+        // </nav>
 
-     );
+    );
 }
- 
+
 export default Navbar;
