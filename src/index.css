@@ -35,26 +35,6 @@ code {
   display: block
 }
 
-/* .navbar {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-bottom: 1px solid #ececec;
-} */
-
-/* .navbar ul{
-  display: flex;
-  flex-flow: row wrap;
-  list-style: none;
-  margin: 0; 
-}
-
-.navbar li{
-  margin-left: 140px;
-  display: flex;
-  justify-content: space-between;
-} */
-
-
 .flexbox-container button {
   color: black;
   align-items: center;
@@ -88,34 +68,9 @@ code {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-/* 
-@media all and (max-width: 900px) {
-  .navbar ul{
-    justify-content: space-evenly;
-  }
-  .navbar li{
-     margin-left: 30px;
-  }
-} */
-/* 
-@media all and (max-width: 550px) {
-  .navbar ul {
-    flex-flow: column wrap;
-    align-items: center;
-  }
-  .navbar li { 
-    margin: 5px;
-    text-align: center; 
-    padding-left: 150px;
-    justify-content: center;
-  }
-} */
 
 .flex-item {
   margin: 30px;
-  /* text-align: center;  */
-  /* padding-left: 150px; */
-  /* justify-content: center; */
 }
 
 .flexbox-container {
@@ -130,7 +85,6 @@ code {
     justify-content: space-between;
   }
 }
-
 
 .modal-body{
   height: 500px;
@@ -191,14 +145,3 @@ code {
   align-items: center;
   justify-content: center;
 }
-
-/* @media all and (max-width: 400px) {
-  .navbar{
-    flex-direction: column;
-  }
-  .navbar button{
-    text-align: center;
-  }
-} */
-
-
